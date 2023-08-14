@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="labelme/icons/icon.png"><br/>labelme
+  <img src="labelme/icons/icon.png"><br/>Labelme Pro
 </h1>
 
 <h4 align="center">
@@ -28,6 +28,7 @@
 </div>
 
 ## Description
+**The Labelme Pro is upgraded from <https://github.com/wkentaro/labelme>**.
 
 Labelme is a graphical image annotation tool inspired by <http://labelme.csail.mit.edu>.  
 It is written in Python and uses Qt for its graphical interface.
@@ -43,7 +44,7 @@ It is written in Python and uses Qt for its graphical interface.
 
 
 ## Features
-
+- [x] *Support collect images by annotated categories*.
 - [x] Image annotation for polygon, rectangle, circle, line and point. ([tutorial](examples/tutorial))
 - [x] Image flag annotation for classification and cleaning. ([#166](https://github.com/wkentaro/labelme/pull/166))
 - [x] Video annotation. ([video annotation](examples/video_annotation))
