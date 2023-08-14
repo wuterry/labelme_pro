@@ -1,7 +1,8 @@
 import os.path as osp
-
+import json
 import numpy as np
 import PIL.Image
+from pathlib import Path
 
 
 def lblsave(filename, lbl):
@@ -21,3 +22,17 @@ def lblsave(filename, lbl):
             "[%s] Cannot save the pixel-wise class label as PNG. "
             "Please consider using the .npy format." % filename
         )
+
+
+def label_to_path(json_file, ext=".jpg"):
+    with open(json_file, "r", encoding="utf-8") as f:
+        ann = json.load(f)
+    info = list()
+    for shape in ann["shapes"]:
+        info.append(
+            {
+                "label": shape["label"],
+                "filename": Path(json_file.replace(".json", ext)).as_posix(),
+            }
+        )
+    return info
